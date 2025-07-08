@@ -1,0 +1,38 @@
+# ─── Core runtime ─────────────────────────────────────────────────────────
+requests
+pandas>=2.2,<3.0              # CSV/JSON parsing + chunked iterators
+python-dotenv>=1.0,<2.0       # .env config
+pandas-stubs
+types-tabulate
+sphinx
+
+# ─── Test dependencies ───────────────────────────────────────────────────
+pytest>=8.1,<9.0
+pytest-cov>=5.0,<6.0
+factory-boy>=3.3,<4.0
+pytest-mock
+
+# ─── Dev / tooling (pre-commit) ───────────────────────────────────────────
+black>=24.3,<25.0
+isort>=5.13,<6.0
+mypy>=1.10,<2.0
+pre-commit>=3.7,<4.0
+matplotlib
+seaborn
+types-seaborn
+
+# Core Airflow installation
+apache-airflow==2.9.3
+
+# You must install dependencies using Apache's constraints to avoid version conflicts:
+# (You'll use this with pip install later, see note below.)
+
+# Providers (if needed)
+apache-airflow-providers-http
+apache-airflow-providers-amazon
+psycopg2-binary
+
+
+
+
+

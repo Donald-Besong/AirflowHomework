@@ -1,0 +1,37 @@
+[2025-07-07T18:01:20.286+0100] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-07T18:01:20.304+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: interviewgraphs_process_youtube_data.load_csv manual__2025-07-07T17:01:16.749372+00:00 [queued]>
+[2025-07-07T18:01:20.319+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: interviewgraphs_process_youtube_data.load_csv manual__2025-07-07T17:01:16.749372+00:00 [queued]>
+[2025-07-07T18:01:20.320+0100] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-07-07T18:01:20.343+0100] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_csv> on 2025-07-07 17:01:16.749372+00:00
+[2025-07-07T18:01:20.348+0100] {standard_task_runner.py:64} INFO - Started process 8698 to run task
+[2025-07-07T18:01:20.367+0100] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'interviewgraphs_process_youtube_data', 'load_csv', 'manual__2025-07-07T17:01:16.749372+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/interview_graphs.py', '--cfg-path', '/tmp/tmpasr280cm']
+[2025-07-07T18:01:20.375+0100] {standard_task_runner.py:91} INFO - Job 225: Subtask load_csv
+[2025-07-07T18:01:20.490+0100] {task_command.py:426} INFO - Running <TaskInstance: interviewgraphs_process_youtube_data.load_csv manual__2025-07-07T17:01:16.749372+00:00 [running]> on host donald-VirtualBox
+[2025-07-07T18:01:20.771+0100] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='interviewgraphs_process_youtube_data' AIRFLOW_CTX_TASK_ID='load_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-07-07T17:01:16.749372+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-07T17:01:16.749372+00:00'
+[2025-07-07T18:01:20.774+0100] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-07T18:01:21.421+0100] {interview_graphs.py:64} INFO - 
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+| video_id    | trending_date   | title                                                                        | channel_title              |   category_id | publish_time             |    views |   likes |   dislikes |   comment_count |
++=============+=================+==============================================================================+============================+===============+==========================+==========+=========+============+=================+
+| Jw1Y-zhQURU | 17.14.11        | John Lewis Christmas Ad 2017 - #MozTheMonster                                | John Lewis                 |            26 | 2017-11-10T07:38:29.000Z |  7224515 |   55681 |      10247 |            9479 |
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+| 3s1rvMFUweQ | 17.14.11        | Taylor Swift: …Ready for It? (Live) - SNL                                    | Saturday Night Live        |            24 | 2017-11-12T06:24:44.000Z |  1053632 |   25561 |       2294 |            2757 |
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+| n1WpP7iowLc | 17.14.11        | Eminem - Walk On Water (Audio) ft. Beyoncé                                   | EminemVEVO                 |            10 | 2017-11-10T17:00:03.000Z | 17158579 |  787420 |      43420 |          125882 |
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+| PUTEiSjKwJU | 17.14.11        | Goals from Salford City vs Class of 92 and Friends at The Peninsula Stadium! | Salford City Football Club |            17 | 2017-11-13T02:30:38.000Z |    27833 |     193 |         12 |              37 |
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+| rHwDegptbI4 | 17.14.11        | Dashcam captures truck's near miss with child in Norway                      | Cute Girl Videos           |            25 | 2017-11-13T01:45:13.000Z |     9815 |      30 |          2 |              30 |
++-------------+-----------------+------------------------------------------------------------------------------+----------------------------+---------------+--------------------------+----------+---------+------------+-----------------+
+[2025-07-07T18:01:21.421+0100] {interview_graphs.py:65} INFO - 
+ ----columns---
+[2025-07-07T18:01:21.421+0100] {interview_graphs.py:66} INFO - 
+Index(['video_id', 'trending_date', 'title', 'channel_title', 'category_id',
+       'publish_time', 'views', 'likes', 'dislikes', 'comment_count'],
+      dtype='object')
+[2025-07-07T18:01:21.987+0100] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-07T18:01:21.988+0100] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-07T18:01:22.021+0100] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=interviewgraphs_process_youtube_data, task_id=load_csv, run_id=manual__2025-07-07T17:01:16.749372+00:00, execution_date=20250707T170116, start_date=20250707T170120, end_date=20250707T170122
+[2025-07-07T18:01:22.104+0100] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-07-07T18:01:22.146+0100] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-07T18:01:22.157+0100] {local_task_job_runner.py:222} INFO - ::endgroup::

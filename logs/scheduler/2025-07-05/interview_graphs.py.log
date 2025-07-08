@@ -1,0 +1,117 @@
+[2025-07-05T15:46:45.332+0100] {processor.py:161} INFO - Started process (PID=84859) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:46:45.335+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:46:45.336+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:45.335+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:46:46.218+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:46:46.464+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.463+0100] {override.py:1930} INFO - Created Permission View: can delete on DAG:interviewgraphs_process_youtube_data
+[2025-07-05T15:46:46.486+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.482+0100] {override.py:1930} INFO - Created Permission View: can read on DAG:interviewgraphs_process_youtube_data
+[2025-07-05T15:46:46.501+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.501+0100] {override.py:1930} INFO - Created Permission View: can edit on DAG:interviewgraphs_process_youtube_data
+[2025-07-05T15:46:46.503+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.502+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:46:46.522+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.518+0100] {dag.py:3111} INFO - Creating ORM DAG for interviewgraphs_process_youtube_data
+[2025-07-05T15:46:46.525+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:46:46.523+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:46:46.551+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.237 seconds
+[2025-07-05T15:47:20.219+0100] {processor.py:161} INFO - Started process (PID=84985) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:20.221+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:47:20.223+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:20.223+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:21.404+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:21.460+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:21.459+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:47:21.488+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:21.488+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:47:21.917+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.727 seconds
+[2025-07-05T15:47:52.744+0100] {processor.py:161} INFO - Started process (PID=85110) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:52.747+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:47:52.748+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:52.748+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:53.923+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:47:53.975+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:53.973+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:47:54.003+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:47:54.002+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:47:54.085+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.373 seconds
+[2025-07-05T15:48:24.394+0100] {processor.py:161} INFO - Started process (PID=85234) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:24.397+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:48:24.399+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:24.398+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:25.288+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:25.339+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:25.339+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:48:25.388+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:25.385+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:48:25.520+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.149 seconds
+[2025-07-05T15:48:55.606+0100] {processor.py:161} INFO - Started process (PID=85361) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:55.608+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:48:55.610+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:55.609+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:56.744+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:48:56.783+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:56.782+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:48:56.804+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:48:56.803+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:48:56.880+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.296 seconds
+[2025-07-05T15:49:26.969+0100] {processor.py:161} INFO - Started process (PID=85478) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:26.972+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:49:26.973+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:26.973+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:28.077+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:28.128+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:28.127+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:49:28.158+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:28.156+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:49:28.235+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.288 seconds
+[2025-07-05T15:49:58.409+0100] {processor.py:161} INFO - Started process (PID=85601) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:58.411+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:49:58.413+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:58.412+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:59.477+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:49:59.532+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:59.531+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:49:59.564+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:49:59.563+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:49:59.638+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.256 seconds
+[2025-07-05T15:50:30.034+0100] {processor.py:161} INFO - Started process (PID=85724) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:50:30.047+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:50:30.047+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:50:30.047+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:50:30.572+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:50:30.604+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:50:30.603+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:50:30.615+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:50:30.615+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:50:30.683+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 0.659 seconds
+[2025-07-05T15:51:00.736+0100] {processor.py:161} INFO - Started process (PID=85850) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:00.736+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:51:00.737+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:00.737+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:01.199+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:01.228+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:01.228+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:51:01.238+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:01.238+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:51:01.261+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 0.534 seconds
+[2025-07-05T15:51:31.755+0100] {processor.py:161} INFO - Started process (PID=85988) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:31.775+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:51:31.776+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:31.776+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:32.353+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:51:32.473+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:32.472+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:51:32.507+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:51:32.507+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:51:32.584+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 0.849 seconds
+[2025-07-05T15:52:02.833+0100] {processor.py:161} INFO - Started process (PID=86114) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:02.835+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:52:02.836+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:02.836+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:03.266+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:03.317+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:03.317+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:52:03.330+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:03.329+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:52:03.383+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 0.564 seconds
+[2025-07-05T15:52:33.600+0100] {processor.py:161} INFO - Started process (PID=86233) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:33.603+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:52:33.604+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:33.604+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:34.101+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:52:34.120+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:34.120+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:52:34.132+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:52:34.131+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:52:34.168+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 0.581 seconds
+[2025-07-05T15:53:04.809+0100] {processor.py:161} INFO - Started process (PID=86353) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:04.814+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:53:04.817+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:04.816+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:05.710+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:05.780+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:05.779+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:53:05.808+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:05.807+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:53:06.076+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.303 seconds
+[2025-07-05T15:53:36.408+0100] {processor.py:161} INFO - Started process (PID=86474) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:36.410+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:53:36.412+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:36.411+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:37.495+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:53:37.557+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:37.556+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:53:37.590+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:53:37.589+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:53:37.673+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.294 seconds
+[2025-07-05T15:54:07.828+0100] {processor.py:161} INFO - Started process (PID=86598) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:07.833+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:54:07.836+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:07.836+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:08.762+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:08.871+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:08.871+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:54:08.894+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:08.894+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:54:08.975+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.170 seconds
+[2025-07-05T15:54:39.254+0100] {processor.py:161} INFO - Started process (PID=86724) to work on /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:39.256+0100] {processor.py:830} INFO - Processing file /home/donald/airflow/dags/interview_graphs.py for tasks to queue
+[2025-07-05T15:54:39.261+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:39.260+0100] {dagbag.py:545} INFO - Filling up the DagBag from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:40.231+0100] {processor.py:840} INFO - DAG(s) 'interviewgraphs_process_youtube_data' retrieved from /home/donald/airflow/dags/interview_graphs.py
+[2025-07-05T15:54:40.282+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:40.281+0100] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-07-05T15:54:40.311+0100] {logging_mixin.py:188} INFO - [2025-07-05T15:54:40.311+0100] {dag.py:3947} INFO - Setting next_dagrun for interviewgraphs_process_youtube_data to None, run_after=None
+[2025-07-05T15:54:40.397+0100] {processor.py:183} INFO - Processing /home/donald/airflow/dags/interview_graphs.py took 1.170 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

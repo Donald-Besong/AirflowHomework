@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Donald O. Besong - Python Airflow Project &#8212; Airflow and plots 7 July 2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5fdce8ac"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to My Project’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-interview_graphs">
+<span id="donald-o-besong-python-airflow-project"></span><h1>Donald O. Besong - Python Airflow Project<a class="headerlink" href="#module-interview_graphs" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="interview_graphs.load_csv">
+<span class="sig-prename descclassname"><span class="pre">interview_graphs.</span></span><span class="sig-name descname"><span class="pre">load_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#interview_graphs.load_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Load a CSV file into a Pandas DataFrame and push it to XCom as a JSON string.
+Note that I did not use dtypes and pase_dates becasue I am in a hurry</p>
+<p>This function is intended to be used as an Airflow PythonOperator task.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">**</span></a>context (Any): Airflow context dictionary containing runtime info.</dt><dd><p>The key ‘ti’ contains the TaskInstance, used for XCom.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+<dt>Raises:</dt><dd><p>FileNotFoundError: If the CSV file does not exist at the specified path.
+pd.errors.ParserError: If there is an error parsing the CSV.</p>
+</dd>
+<dt>Usage in Airflow:</dt><dd><p>This function should be set as the <cite>python_callable</cite> for a PythonOperator.
+It uses <cite>ti.xcom_push()</cite> to push the JSON string representation of the DataFrame
+to XCom with the key “videos_data”.</p>
+</dd>
+<dt>Typing notes:</dt><dd><ul class="simple">
+<li><p><cite>context</cite> is typed as <cite>Any</cite> because Airflow passes a dynamic context dict.</p></li>
+<li><p>We use <cite>cast(TaskInstance, context[“ti”])</cite> to inform mypy that <cite>ti</cite> is a TaskInstance,
+enabling static type checking for <cite>.xcom_push()</cite>.</p></li>
+</ul>
+</dd>
+<dt>Data cleansing/reduction:</dt><dd><blockquote>
+<div><ul class="simple">
+<li><p>The dataset initial had the following columns:</p></li>
+</ul>
+<p>[‘video_id’, ‘trending_date’, ‘title’, ‘channel_title’, ‘category_id’,</p>
+</div></blockquote>
+<p>‘publish_time’, ‘tags’, ‘views’, ‘likes’, ‘dislikes’, ‘comment_count’,
+‘thumbnail_link’, ‘comments_disabled’, ‘ratings_disabled’,
+‘video_error_or_removed’, ‘description’]. 
+- I removed  [‘thumbnail_link’, ‘comments_disabled’, ‘ratings_disabled’,
+‘video_error_or_removed’, ‘description’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interview_graphs.load_from_local">
+<span class="sig-prename descclassname"><span class="pre">interview_graphs.</span></span><span class="sig-name descname"><span class="pre">load_from_local</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#interview_graphs.load_from_local" title="Link to this definition">¶</a></dt>
+<dd><p>Load the locally saved enriched YouTube videos CSV file and log a preview.</p>
+<p>This task pulls the saved file path from XCom pushed by <cite>save_to_local</cite>.
+If the path is missing, it falls back to the Airflow Variable ‘enriched_csv_path’,
+allowing flexible configuration via the Airflow UI.</p>
+<p>It reads the CSV into a Pandas DataFrame and logs the first few rows using
+a well-formatted table for easy inspection.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p><a href="#id3"><span class="problematic" id="id4">**</span></a>context (Any): Airflow runtime context dictionary, expects ‘ti’ (TaskInstance).</p>
+</dd>
+<dt>Raises:</dt><dd><p>FileNotFoundError: If the file does not exist at the specified path.</p>
+</dd>
+<dt>Usage:</dt><dd><p>Suitable for debugging or verification tasks after data persistence.</p>
+</dd>
+<dt>Notes:</dt><dd><ul class="simple">
+<li><p>Uses <cite>tabulate</cite> for human-readable logging output.</p></li>
+<li><p>Provides graceful fallback mechanisms for missing XCom keys.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interview_graphs.load_json">
+<span class="sig-prename descclassname"><span class="pre">interview_graphs.</span></span><span class="sig-name descname"><span class="pre">load_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#interview_graphs.load_json" title="Link to this definition">¶</a></dt>
+<dd><p>Load a JSON file containing category mappings and push to XCom.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p><a href="#id5"><span class="problematic" id="id6">**</span></a>context (Any): Airflow context dictionary. The ‘ti’ key is TaskInstance.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+<dt>Raises:</dt><dd><p>FileNotFoundError: If the JSON file does not exist.
+json.JSONDecodeError: If the JSON content is invalid.</p>
+</dd>
+<dt>Usage in Airflow:</dt><dd><p>Used as a PythonOperator callable that loads a category ID to name map,
+then pushes it to XCom with key “category_map”.</p>
+</dd>
+<dt>Usage of the Variable class:    </dt><dd><p>Variable.get(“csv_path”, default_var=…) returns the default value if 
+the variable “csv_path” does not exist in Airflow’s metadata database. 
+It does not create or save the variable in Airflow’s Variables store automatically.
+That was the case for load_csv() above. Airflow will try to use the variable from metadata,
+and not finding it, it will resort to the default value in the code.
+For demonstration purposes, load_json will apply a more dynamic creation of
+the variable.
+Go to Admin &gt; Variables, Click “+” (Add variable), Set Key: json_path
+Set Value: your desired CSV path (/home/donald/Documents/Tutorials/ResponseMediaTest/GB_category_id.json”).
+The variable gets added in metadata, and Airflow will first look for it there. If absent, it will
+use the default value in the code.</p>
+</dd>
+<dt>Data cleansing/reduction:</dt><dd><ul class="simple">
+<li><p>The json fine is filtered into a new dictionary that only had the category_id as the and category_name as value.</p></li>
+</ul>
+</dd>
+<dt>Typing notes:</dt><dd><p>Similar to <cite>load_csv</cite>, context is dynamically typed and cast to TaskInstance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interview_graphs.map_category_names">
+<span class="sig-prename descclassname"><span class="pre">interview_graphs.</span></span><span class="sig-name descname"><span class="pre">map_category_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#interview_graphs.map_category_names" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve videos data and category map from XCom, map category IDs to names,
+and log a tabulated preview of the enriched DataFrame.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p><a href="#id7"><span class="problematic" id="id8">**</span></a>context (Any): Airflow runtime context with TaskInstance under ‘ti’.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+<dt>Raises:</dt><dd><p>KeyError: If XCom keys “videos_data” or “category_map” are missing.
+ValueError: If JSON parsing fails.</p>
+</dd>
+<dt>Usage in Airflow:</dt><dd><p>This function pulls JSON strings from upstream tasks via XCom,
+converts the video data back into a DataFrame, maps category IDs to names,
+then logs the first few rows in a nicely formatted table using <cite>tabulate</cite>.</p>
+</dd>
+<dt>Typing notes:</dt><dd><p>Uses <cite>cast</cite> to specify that <cite>ti</cite> is TaskInstance for XCom access.
+Explicit type annotations on variables for static analysis.</p>
+</dd>
+<dt>Saving the resulting data:     </dt><dd><p>Persist the enriched YouTube videos DataFrame with category names to a local CSV file.
+This task retrieves the videos data and category map from XCom pushed by upstream tasks,
+reconstructs the DataFrame, maps category IDs to their human-readable names,
+and saves the resulting enriched dataset to a local file path specified by an Airflow Variable.
+The save path can be configured dynamically in the Airflow UI under Admin → Variables
+by setting the variable ‘enriched_csv_path’. If unset, it defaults to default_save_dir .</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Airflow and plots</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Donald O. Besong - Python Airflow Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interview_graphs.load_csv"><code class="docutils literal notranslate"><span class="pre">load_csv()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interview_graphs.load_from_local"><code class="docutils literal notranslate"><span class="pre">load_from_local()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interview_graphs.load_json"><code class="docutils literal notranslate"><span class="pre">load_json()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interview_graphs.map_category_names"><code class="docutils literal notranslate"><span class="pre">map_category_names()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to My Project’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Donald O. Besong, senior Pythn developer.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/reports.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

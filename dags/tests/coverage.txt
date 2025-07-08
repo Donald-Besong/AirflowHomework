@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/donald/airflow
+plugins: mock-3.14.1, anyio-4.9.0, cov-5.0.0, Faker-37.4.0
+collected 1 item
+
+dags/tests/test_all.py .                                                 [100%]
+
+---------- coverage: platform linux, python 3.11.13-final-0 ----------
+Coverage XML written to file coverage.xml
+
+
+============================== 1 passed in 1.22s ===============================
